@@ -1,0 +1,37 @@
+[
+  {
+    "startBalance": 0,
+    "expectedStatusCode": 201,
+    "expectedErrorMessage": null,
+    "type": "Test",
+    "description": "Zůstatek je nula korun"
+  },
+  {
+    "startBalance": "200000,52",
+    "expectedStatusCode": 400,
+    "expectedErrorMessage": "startBalance must be a number conforming to the specified constraints",
+    "type": "Test",
+    "description": "Zůstatek kladné číslo s desetinou"
+  },
+  {
+    "startBalance": -12345.0,
+    "expectedStatusCode": 201,
+    "expectedErrorMessage": null,
+    "type": "Test",
+    "description": "Zůstatek záporné číslo s desetinou "
+  },
+  {
+    "startBalance": -196000921,
+    "expectedStatusCode": 201,
+    "expectedErrorMessage": null,
+    "type": "Test",
+    "description": "Zůstatek celé záporné číslo"
+  },
+  {
+    "startBalance": 298000123,
+    "expectedStatusCode": 201,
+    "expectedErrorMessage": null,
+    "type": "Test",
+    "description": "Zůstatek celé kladné číslo"
+  }
+]
