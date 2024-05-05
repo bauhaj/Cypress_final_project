@@ -8,7 +8,7 @@ export class RegisterPage {
     this.emailInput = customElement("input[data-testid=email-input]");
     this.submitButton = customElement("button[data-testid=submit-button]");
     this.pageHeader = customElement("h1.title");
-    //cy.intercept("/tegb/register").as("register_api");
+    cy.intercept("/tegb/register").as("register_api");
   }
 
   pageHeaderIsVisible() {
@@ -40,8 +40,7 @@ export class RegisterPage {
 
   clickSubmit() {
     this.submitButton.get().click();
-    cy.wait(1000);
-    //cy.wait("@register_api");
+    cy.wait("@register_api");
     return new LoginPage();
   }
 }

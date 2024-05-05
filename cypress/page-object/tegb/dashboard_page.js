@@ -42,7 +42,7 @@ export class DashboardPage extends MenuSection {
   }
 
   lastnameInputContainText(lastname) {
-    this.lastnameInput.get().should("contain.text", lastname);
+    this.lastnameInput.containsText(lastname);
     return this;
   }
 
@@ -57,7 +57,7 @@ export class DashboardPage extends MenuSection {
   }
 
   ageInputContainText(age) {
-    this.ageInput.get().should("contain.text", age);
+    this.ageInput.containsText(age);
     return this;
   }
 
@@ -82,12 +82,12 @@ export class DashboardPage extends MenuSection {
   }
 
   detailProfilIsVisible() {
-    this.detailProfil.get().should("be.visible");
+    this.detailProfil.isVisible();
     return this;
   }
 
   detailProfilHasText(detailProfiltext) {
-    this.detailProfil.get().should("have.text", detailProfiltext);
+    this.detailProfil.hasText(detailProfiltext);
     return this;
   }
 
@@ -97,7 +97,7 @@ export class DashboardPage extends MenuSection {
   }
 
   lastnameInputIsVisible() {
-    this.lastnameInput.get().should("be.visible");
+    this.lastnameInput.isVisible();
     return this;
   }
 
@@ -117,12 +117,12 @@ export class DashboardPage extends MenuSection {
   }
 
   profileActionButtonIsVisible() {
-    this.profileActionButton.get().should("be.visible");
+    this.profileActionButton.isVisible();
     return this;
   }
 
   profileActionButtonHasText(profileActionButtontext) {
-    this.profileActionButton.get().should("have.text", profileActionButtontext);
+    this.profileActionButton.hasText(profileActionButtontext);
     return this;
   }
 
@@ -142,7 +142,7 @@ export class DashboardPage extends MenuSection {
   }
 
   accountBalanceThHasText(accountBalanceThtext) {
-    this.accountBalanceTh.get().should("have.text", accountBalanceThtext);
+    this.accountBalanceTh.hasText(accountBalanceThtext);
     return this;
   }
 
@@ -157,7 +157,7 @@ export class DashboardPage extends MenuSection {
   }
 
   accountActionButtonIsVisible() {
-    this.accountActionButton.get().should("be.visible");
+    this.accountActionButton.isVisible();
     return this;
   }
 

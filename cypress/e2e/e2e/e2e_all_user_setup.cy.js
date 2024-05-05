@@ -8,10 +8,11 @@ describe("E2E User Registration, Account Creation, Profile Completion, Verificat
     new LoginPage().openTegBUrl();
   });
 
-  it("Creation of a new user registration", () => {
+  it("User registration, login and account creation", () => {
     const username = faker.internet.userName();
     const firstname = faker.person.firstName();
     const lastname = faker.person.lastName();
+    const email = faker.internet.exampleEmail();
     const phone = faker.phone.number("+420#########");
     const startBalance = faker.number.int({
       min: 1000,
@@ -54,14 +55,14 @@ describe("E2E User Registration, Account Creation, Profile Completion, Verificat
       .clickProfileActionButton()
       .typeFirstnameInput(firstname)
       .typeLastnameInput(lastname)
-      .typeEmailInput(Cypress.env("tegB_email"))
+      .typeEmailInput(email)
       .typePhoneInput(phone)
       .typeAgeInput("33")
       .clickSaveChangesButton()
 
       .firstnameInputContainText(firstname)
       .lastnameInputContainText(lastname)
-      .emailInputContainText(Cypress.env("tegB_email"))
+      .emailInputContainText(email)
       .phoneInputContainText(phone)
       .ageInputContainText("33")
 

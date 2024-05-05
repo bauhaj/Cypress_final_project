@@ -60,7 +60,7 @@ describe("Dashboard Atomic Tests", { testIsolation: false }, () => {
       new DashboardPage().firstnameInputIsVisible();
     });
 
-    it("Firstname input has contain text", () => {
+    it("Firstname input has contains text", () => {
       new DashboardPage().firstnameInputContainText("Jméno");
     });
 
@@ -68,7 +68,7 @@ describe("Dashboard Atomic Tests", { testIsolation: false }, () => {
       new DashboardPage().lastnameInputIsVisible();
     });
 
-    it("Lastname input has contain text", () => {
+    it("Lastname input has contains text", () => {
       new DashboardPage().lastnameInputContainText("Příjmení");
     });
 
@@ -76,7 +76,7 @@ describe("Dashboard Atomic Tests", { testIsolation: false }, () => {
       new DashboardPage().emailInputIsVisible();
     });
 
-    it("Email input has contain text", () => {
+    it("Email input has contains text", () => {
       new DashboardPage().emailInputContainText("Email");
     });
 
@@ -84,7 +84,7 @@ describe("Dashboard Atomic Tests", { testIsolation: false }, () => {
       new DashboardPage().phoneInputIsVisible();
     });
 
-    it("Phone input has contain text", () => {
+    it("Phone input has contains text", () => {
       new DashboardPage().phoneInputContainText("Telefon");
     });
 
@@ -92,7 +92,7 @@ describe("Dashboard Atomic Tests", { testIsolation: false }, () => {
       new DashboardPage().ageInputIsVisible();
     });
 
-    it("Age input has contain text", () => {
+    it("Age input has contains text", () => {
       new DashboardPage().ageInputContainText("Věk");
     });
 
@@ -104,7 +104,7 @@ describe("Dashboard Atomic Tests", { testIsolation: false }, () => {
       new DashboardPage().profileActionButtonHasText("Upravit profil");
     });
 
-    it("Profile Action Button is clickable", () => {
+    it("Profile Action Button click", () => {
       new DashboardPage().clickProfileActionButton().clickProfileActionButton();
     });
 
@@ -140,7 +140,7 @@ describe("Dashboard Atomic Tests", { testIsolation: false }, () => {
       new DashboardPage().accountActionButtonHasText("Přidat účet");
     });
 
-    it("Account Action Button is clickable", () => {
+    it("Account Action Button click", () => {
       new DashboardPage().accountActionButtonIsClickable();
     });
   });
@@ -166,7 +166,7 @@ describe("Dashboard Atomic Tests", { testIsolation: false }, () => {
       new DashboardPage().logoutButtonHaveText("Odhlásit se");
     });
 
-    it("Logout Button is clickable", () => {
+    it("Logout Button click", () => {
       new DashboardPage().logoutButtonIsClickable();
     });
   });

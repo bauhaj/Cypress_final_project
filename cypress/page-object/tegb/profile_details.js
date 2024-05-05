@@ -20,7 +20,7 @@ export class ProfileDetails extends MenuSection {
     this.profileActionButton = customElement(
       "button[data-testid='toggle-edit-profile-button']"
     );
-    cy.intercept("/tegb/profile").as("Patch_profile_api");
+    cy.intercept("/tegb/profile").as("Patch_profile_api"); //při načtení dashboardu dříve než se provolá api PATCH, nezobrazí se upravená data
   }
 
   clickProfileActionButton() {
